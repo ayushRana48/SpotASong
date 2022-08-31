@@ -5,7 +5,6 @@ import Genre from "./Genre";
 import finalSongList from "../SongData/finalSongList";
 import SearchedSongs from "./SearchedSong";
 import axios from "axios";
-import Slider from '@mui/material/Slider'
 
 export default function Home(props){
 
@@ -432,4 +431,3 @@ export default function Home(props){
         </div>
     )
 }
-
