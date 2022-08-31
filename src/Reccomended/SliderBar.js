@@ -1,7 +1,7 @@
 import React from "react";
 import {Route,Link} from "react-router-dom"
 import NavBar from "../Navbar";
-import { Slider } from "material-ui-slider/es5/src";
+import Slider from '@mui/material/Slider';
 import Checkbox from "react-custom-checkbox";
 
 
@@ -18,7 +18,8 @@ export default function SliderBar(props){
 
     //if slider change change slide.value
     const handleSlider = (newValue, event) => {
-        setSlide({value:newValue, checked:slide.checked});
+        console.log(newValue.target.value)
+        setSlide({value:newValue.target.value, checked:slide.checked});
         console.log(slide)
         console.log(newValue)
 
@@ -36,9 +37,9 @@ export default function SliderBar(props){
     return(
             <div className="sliderTest">
                 <Checkbox className="checkBox" checked={true} onChange={handleCheck} style={{borderColor:"rgb(160, 50, 17)"}}></Checkbox>
-                <Slider className="slider" disabled={!slide.checked} value={props.val} defaultValue={props.val} color="rgb(21, 201, 21)"
-                 onChange={handleSlider}></Slider>
-                 {/* <button onClick={test}>test</button> */}
+                <Slider className="slider" disabled={!slide.checked} value={props.val} defaultValue={props.val} onChange={handleSlider} ></Slider>
+                {/* <Slider className="slider" disabled={!slide.checked} value={props.val} defaultValue={props.val} color="rgb(21, 201, 21)" */}
+                 {/* onChange={handleSlider}></Slider> */}
                 <p className="sliderName">{props.name}</p>
             </div>
         )

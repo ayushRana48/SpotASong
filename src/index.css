@@ -253,7 +253,10 @@ code {
  margin-left: 2vw;
  margin-right: 2vw;
 
+}
 
+.MuiSlider-colorPrimary{
+  color: green;
 }
 
 
