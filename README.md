@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Spotify Stats (Still wokrking on Name) - by Ayush Rana
+## Find new songs based off of audio features from the spotify api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How it works
 
-## Available Scripts
+### Reccomended
+<img width="1347" alt="Screen Shot 2022-08-31 at 2 23 35 AM" src="https://user-images.githubusercontent.com/46659703/187645560-8259d99e-9056-486e-af52-f84afc9902aa.png">
+Here is the Reccomended page. Find songs based of the listed audio features. If you don't want a certain audio feature to be factored in, click the check box next to the respective slider.
+Select genre using the carousel
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Search
+If you want to look up song's audio features so you can use it as a reference look up a song on the search page, click on the album cover and the songs information will show up.
+<img width="940" alt="Screen Shot 2022-08-31 at 2 27 13 AM" src="https://user-images.githubusercontent.com/46659703/187646301-e50392b0-038c-4c73-bc17-39b8e3a6f753.png">
+If you want to use that exact data in the Reccomended page hit the copy button on the right hand of the screen, and go to Reccomended page to paste info using the paste button that shows up when if any info is copied
 
-### `npm test`
+<img width="944" alt="Screen Shot 2022-08-31 at 2 29 59 AM" src="https://user-images.githubusercontent.com/46659703/187646940-c2fa95c4-b3a6-4734-9332-5d48a71af719.png">
+Once you look something up on the Reccomended page a bunch of songs will show up and you can sample them by hovering over their album pic. (Warning not all songs have samples). Add the song to a playlist by clicking the button and the song will show up in the playlist tab. (Red means added)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Playlist 
+<img width="944" alt="Screen Shot 2022-08-31 at 2 32 33 AM" src="https://user-images.githubusercontent.com/46659703/187647431-ec91f913-fab5-4026-a35f-b14aa99a4c4d.png">
+This is how the songs show up in the Playlist tab. Add whatever song name you'd like. 
+Make as many searches you like to add a combination of reccomended songs to your playlist
+(!!! Unfortunately as of 8/30/22 the export playlist is not working. I keep getting 401 error says no token provided. No idea why, if you can help please email me at 4ayushrana@gmail.com :) )
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
