@@ -26,5 +26,4 @@ Once you look something up on the Reccomended page a bunch of songs will show up
 <img width="944" alt="Screen Shot 2022-08-31 at 2 32 33 AM" src="https://user-images.githubusercontent.com/46659703/187647431-ec91f913-fab5-4026-a35f-b14aa99a4c4d.png">
 This is how the songs show up in the Playlist tab. Add whatever song name you'd like. 
 Make as many searches you like to add a combination of reccomended songs to your playlist
-(!!! Unfortunately as of 8/30/22 the export playlist is not working. I keep getting 401 error says no token provided. No idea why, if you can help please email me at 4ayushrana@gmail.com :) )
-
+Click generate playlist and the playlist will show up in your spotify acct with the inputted name
