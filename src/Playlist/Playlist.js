@@ -93,34 +93,57 @@ export default function Playlist(props){
         props.changePlaylist([])
         console.log("populate playlist")
         console.log(id + "playlist")
-        try{
+        let arrId=[]
+        const playlistUrl="https://api.spotify.com/v1/playlists/"+id+"/tracks"
         for(let i=0;i<songList.length;i++){
-            
-            const songId=songList[i].id
-            const x="spotify:track:"+songId
-            console.log(x)
-
-            console.log(songId)
-            const playlistUrl="https://api.spotify.com/v1/playlists/"+id+"/tracks"
-            $.ajax({
-                url: playlistUrl,
-                method: "POST",
-                data:JSON.stringify({
-                    uris:[x]
-                  }),
-                headers: {
-                  'Authorization': 'Bearer ' + props.token,
-                  'Content-Type': 'application/json'
-                },
-                success: function(response) {
-                  console.log(response);
-                }
-              });
-        }}
-        catch(err){
-            console.log(err)
+            const obj="spotify:track:"+songList[i].id
+            arrId.push(obj)
         }
+        console.log(arrId)
+        $.ajax({
+            url: playlistUrl,
+            method: "POST",
+            data:JSON.stringify({
+                uris:arrId
+              }),
+            headers: {
+              'Authorization': 'Bearer ' + props.token,
+              'Content-Type': 'application/json'
+            },
+            success: function(response) {
+              console.log(response);
+            }
+          });
      }
+
+    //     try{
+    //     for(let i=0;i<songList.length;i++){
+            
+    //         const songId=songList[i].id
+    //         const x="spotify:track:"+songId
+    //         console.log(x)
+
+    //         console.log(songId)
+    //         const playlistUrl="https://api.spotify.com/v1/playlists/"+id+"/tracks"
+    //         $.ajax({
+    //             url: playlistUrl,
+    //             method: "POST",
+    //             data:JSON.stringify({
+    //                 uris:arrId
+    //               }),
+    //             headers: {
+    //               'Authorization': 'Bearer ' + props.token,
+    //               'Content-Type': 'application/json'
+    //             },
+    //             success: function(response) {
+    //               console.log(response);
+    //             }
+    //           });
+    //     }}
+    //     catch(err){
+    //         console.log(err)
+    //     }
+    //  }
 
 
 

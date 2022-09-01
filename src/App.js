@@ -170,7 +170,7 @@ function App() {
             {!token ?
             <div>
                 <div className="title2">
-                    <div className="title2Text"><h1> Spotify Stats</h1></div>
+                    <div className="title2Text"><h1> SpotASong</h1></div>
                 </div>
                 <h3 className="introInfo">Use Spotify Stats to help you find reccomended songs using song audio features</h3>
                 <a className="logIn" style={{color:'white',textDecoration: 'none'}} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>Log in</a>
