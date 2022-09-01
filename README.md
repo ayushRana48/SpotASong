@@ -1,4 +1,4 @@
-# Spotify Stats (Still wokrking on Name) - by Ayush Rana
+# SpotASong - by Ayush Rana
 ## Find new songs based off of audio features from the spotify api
 
 ## How it works
@@ -27,3 +27,13 @@ Once you look something up on the Reccomended page a bunch of songs will show up
 This is how the songs show up in the Playlist tab. Add whatever song name you'd like. 
 Make as many searches you like to add a combination of reccomended songs to your playlist
 Click generate playlist and the playlist will show up in your spotify acct with the inputted name
+
+
+###What I learned
+9-1-22 I'm currently a CS student in college so this project was mainly to develop my React skills and I learned many things during the proccess
+Continued to develop React, JS, CSS
+React Router
+React dependencies
+Passing data through complex (for me) web apps
+OAuth2.0 - getting tokens, additional scopes, Axios, Ajax, get, post
+
