@@ -246,7 +246,7 @@ export default function Home(props){
         targetGenre="seed_genres="+currGenre
     }
     let url="https://api.spotify.com/v1/recommendations?market=US&seed_tracks="+paste.id+"&"+targetGenre+targetPop+targetEnergy+targetDance+targetTempo+targetVal+targetLoud+targetAcc+targetSpeech
-
+    console.log(url)
         const {data} = await axios.get(url,{
             headers:{
                 Authorization:`Bearer ${props.token}`
@@ -318,11 +318,6 @@ export default function Home(props){
     function isAPi(){
         if(!paste){
             return false
-        }
-        if(settings.Popularity.checked){
-            if(settings.Popularity.value!==paste.Popularity){
-                return false
-            }
         }
         if(settings.Energy.checked){
             if(settings.Energy.value!==paste.Energy){
