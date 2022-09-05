@@ -10,7 +10,8 @@ import Playlist from "./Playlist/Playlist"
 
 function App() {
     const CLIENT_ID="fdc4fdb38bf7423690bf14eed615589e"
-    const REDIRECT_URI="http://localhost:3000/"
+    // const REDIRECT_URI="http://localhost:3000/"
+    const REDIRECT_URI="https://spot-as-ong-ayushrana48.vercel.app/"
     const AUTH_ENDPOINT="https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     const SCOPES="playlist-modify-private playlist-modify-public user-read-private"
