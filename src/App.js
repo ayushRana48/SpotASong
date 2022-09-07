@@ -6,13 +6,14 @@ import Home from "./Reccomended/Home"
 import NavBar from "./Navbar";
 import SearchPanel from "./Search/SearchPanel";
 import Playlist from "./Playlist/Playlist"
+import $ from jQuery
 
 
 
 function App() {
     const CLIENT_ID="fdc4fdb38bf7423690bf14eed615589e"
-    // const REDIRECT_URI="http://localhost:3000/"
-    const REDIRECT_URI="https://spot-as-ong-ayushrana48.vercel.app/"
+    const REDIRECT_URI="http://localhost:3000/"
+    // const REDIRECT_URI="https://spot-as-ong-ayushrana48.vercel.app/"
     // const REDIRECT_URI="http://spotasong.com/"
 
     const AUTH_ENDPOINT="https://accounts.spotify.com/authorize"
@@ -71,10 +72,25 @@ function App() {
             window.sessionStorage.setItem("token",temp)
             setToken(temp)
         }
+
+        $.ajax({
+            url: 'https://accounts.spotify.com/api/token',
+            method: "POST",
+            data:JSON.stringify({
+                uris:arrId
+              }),
+            headers: {
+              'Authorization': 'Bearer ' + props.token,
+              'Content-Type': 'application/json'
+            },
+            success: function(response) {
+              console.log(response);
+            }
+          });
        
     },[])
 
-    //adding songs from reccomended to To playlist, from reccomended resets every time page switched
+
     useEffect(()=>{
         if(fromReccomended[fromReccomended.length-1]){
             setToPlaylist(x=>[...x,fromReccomended[fromReccomended.length-1]])
@@ -176,7 +192,7 @@ function App() {
                 <div className="title2">
                     <div className="title2Text"><h1> SpotASong</h1></div>
                 </div>
-                <h3 className="introInfo">Use Spotify Stats to help you find reccomended songs using song audio features</h3>
+                <h3 className="introInfo">Use Spotify Stats to help you find recomended songs using song audio features</h3>
                 <a className="logIn" style={{color:'white',textDecoration: 'none'}} href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPES}`}>Log in</a>
             </div>
             :
