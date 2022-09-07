@@ -410,7 +410,8 @@ code {
 }
 
 .homeTitle{
-  margin-left: 40%;
+  margin-left: 44vw;
+  width: 12vw;
 }
 
 .copy{
@@ -487,4 +488,17 @@ code {
   position: absolute;
   right:5%
 
+}
+
+.seedTrack{
+  display: flex;
+  width: 22vw;
+  margin-bottom:-3vh;
+  margin-left: 39vw;
+
+}
+.seedTrack >p{
+  display: flex;
+  margin-left: 2vw;
+  
 }

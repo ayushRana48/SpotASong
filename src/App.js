@@ -8,10 +8,13 @@ import SearchPanel from "./Search/SearchPanel";
 import Playlist from "./Playlist/Playlist"
 
 
+
 function App() {
     const CLIENT_ID="fdc4fdb38bf7423690bf14eed615589e"
     // const REDIRECT_URI="http://localhost:3000/"
     const REDIRECT_URI="https://spot-as-ong-ayushrana48.vercel.app/"
+    // const REDIRECT_URI="http://spotasong.com/"
+
     const AUTH_ENDPOINT="https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     const SCOPES="playlist-modify-private playlist-modify-public user-read-private"
@@ -51,7 +54,7 @@ function App() {
     //getting token from url
     useEffect(()=>{
         const hash=window.location.hash
-        let token =window.localStorage.getItem("token")
+        let token =window.sessionStorage.getItem("token")
         setToken(token)
 
         
@@ -65,7 +68,7 @@ function App() {
 
             temp=temp[1];
             window.location.hash=""
-            window.localStorage.setItem("token",temp)
+            window.sessionStorage.setItem("token",temp)
             setToken(temp)
         }
        

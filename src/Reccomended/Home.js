@@ -5,6 +5,7 @@ import Genre from "./Genre";
 import finalSongList from "../SongData/finalSongList";
 import SearchedSongs from "./SearchedSong";
 import axios from "axios";
+import Checkbox from "react-custom-checkbox";
 
 export default function Home(props){
 
@@ -28,6 +29,7 @@ export default function Home(props){
     const[paste,setPaste]=React.useState()
     //additional reccomended songs
     const[listRec,setListRec]=React.useState([])
+    const[seedSong,setSeedSong]=React.useState(true)
 
     //store settings through refresh page
     React.useEffect(()=>{
@@ -40,7 +42,7 @@ export default function Home(props){
     React.useEffect(()=>{
         testRec()
         console.log(listRec)
-    },[paste])
+    },[paste,settings,currGenre])
 
 
     React.useEffect(()=>{props.setPage("Home")
@@ -228,13 +230,13 @@ export default function Home(props){
         targetDance="target_danceability="+settings.Danceability.value/100+"&"
     }
     if(settings.Tempo.checked){
-        targetTempo="target_tempo="+settings.Tempo.value*1.5+50+"&"
+        targetTempo="target_tempo="+(settings.Tempo.value*1.5+50)+"&"
     }
     if(settings.Valence.checked){
         targetVal="target_valence="+settings.Valence.value*1.5+50+"&"
     }
     if(settings.Loudness.checked){
-        targetLoud="target_loudness="+(settings.Loudness.value/100)*-25+"&"
+        targetLoud="target_loudness="+(settings.Loudness.value/4-25)+"&"
     }
     if(settings.Acousticness.checked){
         targetAcc="target_acousticness="+(settings.Acousticness.value/100)+"&"
@@ -269,7 +271,7 @@ export default function Home(props){
             arr.push(songList[i])
         }
         //only uses spotify api reccomendations, if user pastes song features and does not change them, (allowed to uncheck features)
-        if(isAPi()){
+        if(seedSong){
             listRec.forEach(x=>{
                 console.log(x)
                 const newObj={name:x.name,
@@ -386,11 +388,15 @@ export default function Home(props){
     //maps songs to Searched Song component
     const songsWithScore= topSongs.map(x =><SearchedSongs removeSong={removeSong} inPlaylist={props.inPlaylist} name={x.name} id={x.id} album={x.album} artist={x.artist} image={x.image} addSong={addSong} previewUrl={x.previewUrl}/>)
 
+    function handleCheck(){
+        setSeedSong(x=>!x)
+        console.log(seedSong)
+    }
 
     return(
         <div>
             <h1 className="homeTitle">
-                Find God (Songs)
+                Find Songs
             </h1> 
             <div className="sliderGrid">
             <div className="paste">
@@ -413,6 +419,14 @@ export default function Home(props){
                 {genreList}
             </Carousel>  
             </div>
+            {paste &&
+
+            <div className="seedTrack">  
+                <Checkbox className="checkBox" checked={true} onChange={handleCheck} style={{borderColor:"rgb(160, 50, 17)"}}></Checkbox>
+                <p>Find Songs based off Pasted Song?</p>
+            </div>
+            }
+            
            <button onClick={calculateScore}className="searchSong">Search</button>
           
            {topSongs.length>0 && <div className="testOverFlow">
