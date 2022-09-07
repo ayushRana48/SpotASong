@@ -233,7 +233,7 @@ export default function Home(props){
         targetTempo="target_tempo="+(settings.Tempo.value*1.5+50)+"&"
     }
     if(settings.Valence.checked){
-        targetVal="target_valence="+settings.Valence.value*1.5+50+"&"
+        targetVal="target_valence="+(settings.Valence.value/100)+"&"
     }
     if(settings.Loudness.checked){
         targetLoud="target_loudness="+(settings.Loudness.value/4-25)+"&"
