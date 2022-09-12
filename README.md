@@ -1,16 +1,16 @@
 # SpotASong - by Ayush Rana
 ## Find new songs based off of audio features from the spotify api
 
+
+## Live
+https://spot-as-ong-ayushrana48.vercel.app/
+
 ## How it works
 
 ### Reccomended
 <img width="1347" alt="Screen Shot 2022-08-31 at 2 23 35 AM" src="https://user-images.githubusercontent.com/46659703/187645560-8259d99e-9056-486e-af52-f84afc9902aa.png">
 Here is the Reccomended page. Find songs based of the listed audio features. If you don't want a certain audio feature to be factored in, click the check box next to the respective slider.
 Select genre using the carousel
-
-
-### Live
-https://spot-as-ong-ayushrana48.vercel.app/
 
 
 
