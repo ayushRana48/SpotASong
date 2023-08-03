@@ -7,12 +7,6 @@ https://spot-as-ong-ayushrana48.vercel.app/
 
 ## How it works
 
-### Reccomended
-<img width="1347" alt="Screen Shot 2022-08-31 at 2 23 35 AM" src="https://user-images.githubusercontent.com/46659703/187645560-8259d99e-9056-486e-af52-f84afc9902aa.png">
-Here is the Reccomended page. Find songs based of the listed audio features. If you don't want a certain audio feature to be factored in, click the check box next to the respective slider.
-Select genre using the carousel
-
-
 
 ### Search
 If you want to look up song's audio features so you can use it as a reference look up a song on the search page, click on the album cover and the songs information will show up.
